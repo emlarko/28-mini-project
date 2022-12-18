@@ -1,24 +1,29 @@
+:root {
+    --dark: #2A2A2A;
+    --pink: #FB6EFF;
+    --white: white;
+}
+
 body {
-    background-color: #2A2A2A; 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     text-align: center;
 }
 
-
 .card-header {
     position: relative;
     margin-top: -50px;
     padding-left: 5px;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     border-radius: 8px;
     font-weight: bold;
     font-size: 20px;
-    color: #FB6EFF;
-    background-color: #2A2A2A;
+    color: var(--pink);
+    background-color: var(--dark);
     transition: all 0.5s ease-in-out;
 }
 
@@ -36,7 +41,7 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     margin: 20px;
-    border: 2px dashed white;
+    border: 2px dashed var(--white);
     flex: 0;
     padding: 5px;
 }
@@ -51,9 +56,10 @@ header {
     }
 
 .content {
-  padding: 20px;
+  padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #FB6EFF; 
+  font-size: 16px;
+  color: var(--pink);
 }
 
 .code-card {
@@ -63,15 +69,16 @@ header {
         rgba(232, 102, 236, 0.6) 100%
         );
     font-family:'Courier New', Courier, monospace;
-    color: white;
+    color: var(--white);
     font-size: 16px;
     padding: 5px;
     min-width: 350px;
     min-height: 200px;
+    user-select: all;
 } 
 
 .row2 .code-card {
-    min-height: 400px;
+    min-height: 220px;
 }
 
 .card-header:hover,
@@ -80,16 +87,20 @@ header {
     rgba(232, 102, 236, 1), 0 0 15px
     rgba(232, 102, 236, 1);
     }
+ 
 
 @media screen and (max-width: 992px) {
-    .column {
-    width: 50%;
-    }
- }
-      
-      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
- @media screen and (max-width: 768px) {
-    .column {
-    width: 100%;
+    .grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto;
     }
 }
+         
+ @media screen and (max-width: 768px) {
+    .grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto;
+    }
+ }
