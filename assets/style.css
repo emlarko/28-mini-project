@@ -1,49 +1,56 @@
-/* COMMON STYLES        */
-
-
 body {
     background-color: #2A2A2A; 
     color: white;
     font-family: Arial, Helvetica, sans-serif
 }
 
+header {
+    text-align: center;
+}
+
 
 .card-header {
     position: relative;
-    margin-top: -40px;
-    padding: 5px;
+    margin-top: -50px;
+    padding-left: 5px;
     border: 2px solid white;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 20px;
     color: #FB6EFF;
-    transition: all 0.5s ease-in-
-    out;
+    background-color: #2A2A2A;
+    transition: all 0.5s ease-in-out;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: 20px;
     flex: 0;
     padding: 5px;
-    
     }
 
 .column {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: 20px;
     border: 2px dashed white;
     flex: 0;
     padding: 5px;
 }
 
-.content {
+.row2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    flex: 0;
+    padding: 5px;
+    }
 
+.content {
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: #FB6EFF; 
@@ -59,7 +66,13 @@ body {
     color: white;
     font-size: 16px;
     padding: 5px;
+    min-width: 350px;
+    min-height: 200px;
 } 
+
+.row2 .code-card {
+    min-height: 400px;
+}
 
 .card-header:hover,
 .card-header:hover .card-header {
@@ -68,9 +81,15 @@ body {
     rgba(232, 102, 236, 1);
     }
 
-
-
-
-
-
-  
+@media screen and (max-width: 992px) {
+    .column {
+    width: 50%;
+    }
+ }
+      
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 768px) {
+    .column {
+    width: 100%;
+    }
+}
