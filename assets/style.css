@@ -1,17 +1,76 @@
+/* COMMON STYLES        */
+
+
 body {
+    background-color: #2A2A2A; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-    border-style: dashed;
-  }
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    font-size: 15px;
-    text-align: center;
-  }
+
+.card-header {
+    position: relative;
+    margin-top: -40px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #FB6EFF;
+    transition: all 0.5s ease-in-
+    out;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    flex: 0;
+    padding: 5px;
+    
+    }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    border: 2px dashed white;
+    flex: 0;
+    padding: 5px;
+}
+
+.content {
+
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FB6EFF; 
+}
+
+.code-card {
+    border-radius: 8px;
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+        );
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+} 
+
+.card-header:hover,
+.card-header:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+    }
+
+
+
+
+
+
+  
